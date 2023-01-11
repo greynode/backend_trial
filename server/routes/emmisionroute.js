@@ -54,7 +54,7 @@ routerstation.post("/getprocess", async (req, res) => {
 
   else{
    
-        const usr = await processdb.find({map:map});
+        const usr = await processdb.find({email:map});
             
       res.json(usr)
   }
@@ -70,7 +70,7 @@ routerstation.post("/getstation", async (req, res) => {
 
   else{
    
-        const usr = await stationdb.find({map:map});
+        const usr = await stationdb.find({email:map});
             
       res.json(usr)
   }
@@ -158,7 +158,7 @@ routerstation.post("/getmobile", async (req, res) => {
 
   else{
    
-        const usr = await mobiledb.find({map:map});
+        const usr = await mobiledb.find({email:map});
             
       res.json(usr)
   }
@@ -206,7 +206,7 @@ routerstation.post("/energydash", async (req, res) => {
 
   else{
    
-        const usr = await energydb.find({map:map});
+        const usr = await energydb.find({email:map});
             
       res.json(usr)
   }
@@ -242,12 +242,7 @@ routerstation.post("/mc1", async (req, res) => {
     }
 
 });
-routerstation.get('/mcdash', async (req, res) => {
-	const usr = await Mcdb.find();
 
-
-	res.json(usr);
-});
 //fugitive 
 
 routerstation.post("/fug", async (req, res) => {
@@ -288,7 +283,7 @@ routerstation.post("/fugdash", async (req, res) => {
 
   else{
    
-        const usr = await fugitiveDB.find({map:map});
+        const usr = await fugitiveDB.find({email:map});
             
       res.json(usr)
   }
@@ -332,7 +327,7 @@ routerstation.post('/franchisedash', async (req, res) => {
 
   else{
    
-        const usr = await scope3db.find({map:map});
+        const usr = await scope3db.find({email:map});
             
       res.json(usr)
   }
@@ -377,7 +372,7 @@ routerstation.post('/goodsscope3dash', async (req, res) => {
 
   else{
    
-        const usr = await scope3goodsdb.find({map:map});
+        const usr = await scope3goodsdb.find({email:map});
             
       res.json(usr)
   }
@@ -423,7 +418,7 @@ routerstation.post('/downdash', async (req, res) => {
 
   else{
    
-        const usr = await downstreamdb.find({map:map});
+        const usr = await downstreamdb.find({email:map});
             
       res.json(usr)
   }
@@ -470,7 +465,7 @@ routerstation.post("/upstreamdash", async (req, res) => {
 
   else{
    
-        const usr = await upstreamdb.find({map:map});
+        const usr = await upstreamdb.find({email:map});
             
       res.json(usr)
   }
@@ -514,7 +509,7 @@ routerstation.post('/capdash', async (req, res) => {
 
   else{
    
-        const usr = await capitaldb.find({map:map});
+        const usr = await capitaldb.find({email:map});
             
       res.json(usr)
   }
