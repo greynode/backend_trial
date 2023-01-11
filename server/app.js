@@ -31,10 +31,13 @@ app.use(routerstation);
 
 
 
-app.use(express.static(path.join(__dirname,'build')));
-app.get('/*',function(req,res){
-    res.sendFile(path.join(__dirname,'build','index.html'))
-})
+app.use(cors(
+    {
+        origin:"https://frontend-trial.vercel.app",
+        methods:["GET","POST","DELETE","PUT"],
+    }
+))
+
 
 
 app.listen(port);
