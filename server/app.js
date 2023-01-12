@@ -33,7 +33,7 @@ app.use(routerstation);
 
 app.use(cors(
     {
-        origin:"https://frontend-trial.vercel.app",
+        origin:"https://beyondsusfrontend.vercel.app/",
         methods:["GET","POST","DELETE","PUT"],
     }
 ))
